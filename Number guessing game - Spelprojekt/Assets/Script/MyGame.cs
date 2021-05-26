@@ -11,27 +11,27 @@ public class MyGame : MonoBehaviour
     int guess = 500;
 
     void Start() {
-        max = max + 1;
+        max = max + 1; // Gör så att det största värdet kan vara 1000
         MakeGuess();
     
     }
 
     void UpdateGuesstext() {
-     myGuessText.GetComponent<Text>().text = "This is my guess: " + guess;
+     myGuessText.GetComponent<Text>().text = "This is my guess: " + guess; // Uppdaterar gissningen vid varje ny spelomgång
     }
 
     void MakeGuess() {
-        guess = Random.Range(min, max);
-        UpdateGuesstext();
+        guess = Random.Range(min, max); // Väljer ett slumpmässigt tal mellan max och min
+        UpdateGuesstext(); // Uppdaterar texten med gissningen
     }
 
-    public void Lower() {
+    public void Lower() { // Användaren tryckte på knappen lägre. Gissningen uppdateras
         max = guess - 1;
         MakeGuess();
         
     }
         
-    public void Higher() {
+    public void Higher() { // Användaren tryckte på knappen Högre. Gissningen uppdateras
         min = guess + 1;
         MakeGuess();
     }

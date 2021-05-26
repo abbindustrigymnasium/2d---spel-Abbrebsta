@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+// Används inte
 public class InstructionsToGame : MonoBehaviour{
 
     public Text messageText;

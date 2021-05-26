@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour{
 
-    public void LoadScene(string SceneToLoad){
+    public void LoadScene(string SceneToLoad){ // Laddar upp den nya scenen
         Debug.Log("LoadScene: " + SceneToLoad);
         SceneManager.LoadScene(SceneToLoad);
     }
